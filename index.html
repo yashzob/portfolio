@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Hola</title>
+    <title>Yash Vardhan Yadav - Full Stack Developer Portfolio</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/testimonials-responsive-fix.css">
 
     <!-- script
     ================================================== -->
@@ -135,36 +136,6 @@
         <div class="row about-content">
 
             <div class="col-six tab-full left">
-                <div class="col-full text-center">
-<h3>Robust Concurrency Handling & Feature-Rich Django E-commerce Project</h3>
-
-<p><em>Instruction to login: <br>
-URL: <a href="http://16.170.15.118:8000/" target="_blank" rel="noopener noreferrer">http://16.170.15.118:8000/</a><br>
-User email: yashivam@gmail.com<br>
-Password: !1357Gone1357<br>
-(Sign up is linked with Twilio WhatsApp OTP verification)<br>
-Add new product page: <a href="http://16.170.15.118:8000/product" target="_blank" rel="noopener noreferrer">http://16.170.15.118:8000/product</a></em></p>
-
-<p>
-In my Django E-commerce project, I implemented a complete online store solution featuring robust concurrency control and comprehensive feature coverage. Core functionalities included user registration, login/logout, and profile management, allowing users to manage their accounts efficiently. The product management module enabled both users and admins to view product details, while administrators could perform create, update, and delete operations.
-</p>
-
-<p>
-The shopping cart allowed users to add or remove items dynamically, which seamlessly integrated with a multi-step checkout process. This process included cart review, shipping address capture, and dual payment options — Stripe and Cash on Delivery — culminating in order confirmation and storage. A section for viewing past completed orders was also included for user convenience.
-</p>
-
-<p>
-A key aspect of the project was <strong>efficient concurrency handling</strong>, particularly in <strong>stock management during high-traffic operations</strong>. To maintain data integrity, I applied a combination of <strong>version control (optimistic locking)</strong> and <strong>queued background processing</strong> to prevent race conditions. These ensured that simultaneous requests did not lead to stock inconsistencies or data conflicts. Although retries were not needed due to the system’s accuracy and stability under load, the architecture is designed to support them if ever required.
-</p>
-
-<p>
-Performance testing with <strong>JMeter for up to 500 users</strong> confirmed the system’s reliability. For example, the <code>/checkout/</code> and <code>/save-shipping-address/</code> endpoints maintained <strong>low error rates of 3.43% and 4.29%</strong>, respectively, even under concurrent load — reflecting the success of my concurrency strategies.
-</p>
-<a href="aggregatereport200.csv" download>📥 Click here to get the full report</a>
-                </div>
-            </div>
-
-            <div class="col-six tab-full right">
                 <h3>I've Got Some skills.</h3>
 
 <ul class="skill-bars">
@@ -217,6 +188,35 @@ Performance testing with <strong>JMeter for up to 500 users</strong> confirmed t
 </ul>
 
 <p><strong>Summary:</strong> The Jaipur saree project is a robust Django-based e-commerce platform with comprehensive features including concurrency control, user and product management, secure payment processing, and communication integrations, designed for high performance and reliability.</p>
+            </div>
+            <div class="col-six tab-full right">
+                <div class="col-full text-center">
+<h3>Robust Concurrency Handling & Feature-Rich Django E-commerce Project</h3>
+
+<p><em>Instruction to login: <br>
+URL: <a href="http://16.170.15.118:8000/" target="_blank" rel="noopener noreferrer">http://16.170.15.118:8000/</a><br>
+User email: yashivam@gmail.com<br>
+Password: !1357Gone1357<br>
+(Sign up is linked with Twilio WhatsApp OTP verification)<br>
+Add new product page: <a href="http://16.170.15.118:8000/product" target="_blank" rel="noopener noreferrer">http://16.170.15.118:8000/product</a></em></p>
+
+<p>
+In my Django E-commerce project, I implemented a complete online store solution featuring robust concurrency control and comprehensive feature coverage. Core functionalities included user registration, login/logout, and profile management, allowing users to manage their accounts efficiently. The product management module enabled both users and admins to view product details, while administrators could perform create, update, and delete operations.
+</p>
+
+<p>
+The shopping cart allowed users to add or remove items dynamically, which seamlessly integrated with a multi-step checkout process. This process included cart review, shipping address capture, and dual payment options — Stripe and Cash on Delivery — culminating in order confirmation and storage. A section for viewing past completed orders was also included for user convenience.
+</p>
+
+<p>
+A key aspect of the project was <strong>efficient concurrency handling</strong>, particularly in <strong>stock management during high-traffic operations</strong>. To maintain data integrity, I applied a combination of <strong>version control (optimistic locking)</strong> and <strong>queued background processing</strong> to prevent race conditions. These ensured that simultaneous requests did not lead to stock inconsistencies or data conflicts. Although retries were not needed due to the system’s accuracy and stability under load, the architecture is designed to support them if ever required.
+</p>
+
+<p>
+Performance testing with <strong>JMeter for up to 500 users</strong> confirmed the system’s reliability. For example, the <code>/checkout/</code> and <code>/save-shipping-address/</code> endpoints maintained <strong>low error rates of 3.43% and 4.29%</strong>, respectively, even under concurrent load — reflecting the success of my concurrency strategies.
+</p>
+<a href="aggregatereport200.csv" download>📥 Click here to get the full report</a>
+                </div>
             </div>
 
         </div> <!-- end about-content -->
@@ -428,7 +428,7 @@ Performance testing with <strong>JMeter for up to 500 users</strong> confirmed t
             </div>
             <br>
         </div>
-
+        <br><br><br>
         <div class="row testimonials">
 
             <div class="col-full testimonials__slider">
@@ -444,7 +444,7 @@ Performance testing with <strong>JMeter for up to 500 users</strong> confirmed t
                     </div>
 
                 </div>
-
+                <br><br><br>
                 <div class="testimonials__slide">
 
                     <div class="item-folio__text">
@@ -457,29 +457,9 @@ Performance testing with <strong>JMeter for up to 500 users</strong> confirmed t
 
                 </div>
 
-                <div class="testimonials__slide">
+                
 
-                    <div class="item-folio__text">
-                            <h3 class="item-folio__title"><a href="Loan Approval Prediction.docx" download style="color: white;">Loan Approval Prediction--> (download details)</a></h3>
-                        <p class="item-folio__cat">Predicting loan approval status using classification algorithms and feature engineering.</p>
-                        <a href="Loan Approval Prediction.docx" class="item-folio__project-link" title="Project Document" download>
-                            <i class="im im-download"></i> Download Project
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="testimonials__slide">
-
-                    <div class="item-folio__text">
-                            <h3 class="item-folio__title"><a href="Used Car Price Prediction Application.docx" download style="color: white;">Used Car Price Prediction Application -->(download details)</a></h3>
-                        <p class="item-folio__cat">A web application for predicting used car prices based on various features using regression models.</p>
-                        <a href="Used Car Price Prediction Application.docx" class="item-folio__project-link" title="Project Document" download>
-                            <i class="im im-download"></i> Download Project
-                        </a>
-                    </div>
-
-                </div>
+                
 
                 
 
@@ -630,13 +610,15 @@ Performance testing with <strong>JMeter for up to 500 users</strong> confirmed t
                 <h3>Contact</h3>
                 <h1>Say Hello.</h1>
                 
-                <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
+                <p class="lead">
+                    We'd love to hear from you. Please fill out the form below to get in touch with
+                </p>
             </div>
         </div>
 
         <div class="row contact__main">
             <div class="col-eight tab-full contact__form">
-                <form name="contactForm" id="contactForm" method="post" action="">
+<form name="contactForm" id="contactForm" method="get" action="https://wa.me/917565888485" enctype="text/plain" target="_blank">
                     <fieldset>
     
                     <div class="form-field">
@@ -805,6 +787,27 @@ Performance testing with <strong>JMeter for up to 500 users</strong> confirmed t
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        // Override form submission to send form data via WhatsApp message
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('contactName').value.trim();
+            var email = document.getElementById('contactEmail').value.trim();
+            var subject = document.getElementById('contactSubject').value.trim();
+            var message = document.getElementById('contactMessage').value.trim();
+
+            var whatsappMessage = 
+                "Name: " + name + "%0A" +
+                "Email: " + email + "%0A" +
+                "Subject: " + subject + "%0A" +
+                "Message: " + message;
+
+            var whatsappUrl = "https://wa.me/917565888485?text=" + whatsappMessage;
+
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 </body>
 
 </html>
