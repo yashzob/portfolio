@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Hola</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
+                <li><a class="smoothscroll"  href="#blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Hello There</h3>
+
+                <h1>
+                    I am Yash Vardhan Yadav. <br>
+                    I am a Full Stack Developer  <br>
+                    
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        Latest Projects
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+            <li>
+                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
+            </li>
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+        
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>About</h3>
+                <h1>More About Me</h1>
+                <p class="lead">Experienced Python Developer specializing in Django, Django REST Framework (DRF),  with a strong background in AI-driven applications and e-commerce solutions. Proven expertise in enhancing system performance, developing scalable REST APIs, and implementing big data processing pipelines. Passionate about data-driven decision-making and automation.  </div>
+        </div>
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full left">
+                <div class="col-full text-center">
+                    <h3>Robust Concurrency Handling & Feature-Rich Django E-commerce Project</h3>
+
+<p>
+In my Django E-commerce project, I implemented a complete online store solution featuring robust concurrency control and comprehensive feature coverage. Core functionalities included user registration, login/logout, and profile management, allowing users to manage their accounts efficiently. The product management module enabled both users and admins to view product details, while administrators could perform create, update, and delete operations.
+</p>
+
+<p>
+The shopping cart allowed users to add or remove items dynamically, which seamlessly integrated with a multi-step checkout process. This process included cart review, shipping address capture, and dual payment options — Stripe and Cash on Delivery — culminating in order confirmation and storage. A section for viewing past completed orders was also included for user convenience.
+</p>
+
+<p>
+A key aspect of the project was <strong>efficient concurrency handling</strong>, particularly in <strong>stock management during high-traffic operations</strong>. To maintain data integrity, I applied a combination of <strong>version control (optimistic locking)</strong> and <strong>queued background processing</strong> to prevent race conditions. These ensured that simultaneous requests did not lead to stock inconsistencies or data conflicts. Although retries were not needed due to the system’s accuracy and stability under load, the architecture is designed to support them if ever required.
+</p>
+
+<p>
+Performance testing with <strong>JMeter for up to 500 users</strong> confirmed the system’s reliability. For example, the <code>/checkout/</code> and <code>/save-shipping-address/</code> endpoints maintained <strong>low error rates of 3.43% and 4.29%</strong>, respectively, even under concurrent load — reflecting the success of my concurrency strategies.
+</p>
+<a href="aggregatereport200.csv" download>📥 Click here to get the full report</a>
+                </div>
+            </div>
+
+            <div class="col-six tab-full right">
+                <h3>I've Got Some skills.</h3>
+
+<ul class="skill-bars">
+    <li>
+        <div class="progress percent95"><span>95%</span></div>
+        <strong>Python</strong>
+    </li>
+    <li>
+        <div class="progress percent90"><span>90%</span></div>
+        <strong>Django</strong>
+    </li>
+    <li>
+        <div class="progress percent85"><span>85%</span></div>
+        <strong>Django REST Framework</strong>
+    </li>
+    <li>
+        <div class="progress percent75"><span>75%</span></div>
+        <strong>Flask</strong>
+    </li>
+    
+    <li>
+        <div class="progress percent85"><span>85%</span></div>
+        <strong>Pandas</strong>
+    </li>
+    <li>
+        <div class="progress percent85"><span>85%</span></div>
+        <strong>NumPy</strong>
+    </li>
+    <li>
+        <div class="progress percent80"><span>80%</span></div>
+        <strong>Scikit-learn</strong>
+    </li>
+    <li>
+        <div class="progress percent75"><span>65%</span></div>
+        <strong>Docker</strong>
+    </li>
+    
+    <li>
+        <div class="progress percent80"><span>8%</span></div>
+        <strong>WhatsApp API</strong>
+    </li>
+    <li>
+        <div class="progress percent80"><span>80%</span></div>
+        <strong>Google Sheets API</strong>
+    </li>
+    <li>
+        <div class="progress percent85"><span>85%</span></div>
+        <strong>OpenAI</strong>
+    </li>
+</ul>
+
+<p><strong>Summary:</strong> The Jaipur saree project is a robust Django-based e-commerce platform with comprehensive features including concurrency control, user and product management, secure payment processing, and communication integrations, designed for high performance and reliability.</p>
+            </div>
+
+        </div> <!-- end about-content -->
+
+        <div class="row about-content about-content--buttons">
+
+            <div class="col-six tab-full left">
+                <a href="Yash Vardhan Yadav Data Sci.pdf" class="btn btn--primary full-width">Download My data Science CV</a>
+            </div>
+            <div class="col-six tab-full left">
+                <a href="Yash Vardhan Yadav Full Stack-1.pdf" class="btn btn--primary full-width">Download My FullStack CV</a>
+            </div>
+            <div class="col-six tab-full left">
+                <a href="https://wa.me/917565888485?text=I%20am%20interested%20in%20your%20profile" class="btn full-width">Hire Me Now</a>
+            </div>
+
+        </div> <!-- end about-content buttons -->
+
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h3>My Work Experience.</h3>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+<div class="timeline__block">
+    <div class="timeline__bullet"></div>
+    <div class="timeline__header">
+        <p class="timeline__timeframe">April 2024 - Present</p>
+        <h3>Consistent Infosystems - Delhi</h3>
+        <h5>Software Engineer</h5>
+    </div>
+    <div class="timeline__desc">
+        <ul>
+            <li>Resolved race condition in stock management by implementing RabbitMQ, Optimistic Locking, and database triggers, improving system stability using Django.</li>
+            <li>Improved system efficiency and concurrency handling, preventing incorrect stock values and enhancing overall e-commerce operations.</li>
+            <li>Developed and deployed AI-powered chat sales bot and customer service bot on WhatsApp using Django and DRF.</li>
+            <li>Automated Google Sheets updates with QCluster and Google Sheets API for tele caller automation.</li>
+            <li>Built a one-click report generation tool using Python Notebooks and Google Sheets API, integrated with Django.</li>
+            <li>Designed and deployed a Google Maps lead scraper and created ER and Process Flow Diagrams for CRM.</li>
+        </ul>
+    </div>
+</div> <!-- end timeline__block -->
+
+<div class="timeline__block">
+    <div class="timeline__bullet"></div>
+    <div class="timeline__header">
+        <p class="timeline__timeframe">July 2021 - Oct 2023</p>
+        <h3>Sanskaar Int. School</h3>
+        <h5>Python Teacher & Mentor</h5>
+    </div>
+    <div class="timeline__desc">	
+        <ul>
+            <li>Guided students in data preprocessing techniques, handling missing data, and feature engineering in Python.</li>
+        </ul>
+    </div>
+</div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+<div class="timeline__block">
+    <div class="timeline__bullet"></div>
+    <div class="timeline__header">
+        <p class="timeline__timeframe">Sep 2019 - March 2020</p>
+        <h3>Kendriya Vidyalaya Lakhimpur Kheri</h3>
+        <h5>Computer Instructor</h5>
+    </div>
+    <div class="timeline__desc">
+        <ul>
+            <li>Developed educational programs focused on data analysis and cleaning methodologies.</li>
+        </ul>
+    </div>
+</div> <!-- end timeline__block -->
+
+<div class="timeline__block">
+    <div class="timeline__bullet"></div>
+    <div class="timeline__header">
+        <p class="timeline__timeframe">Jan 2014 - March 2018 (Evening)</p>
+        <h3>Net Tech Computer Institute</h3>
+        <h5>Java Trainer</h5>
+    </div>
+    <div class="timeline__desc">
+        <ul>
+            <li>Trained students in data structures and preprocessing techniques.</li>
+        </ul>
+    </div>
+</div> <!-- end timeline__block -->
+
+<div class="timeline__block">
+    <div class="timeline__bullet"></div>
+    <div class="timeline__header">
+        <p class="timeline__timeframe">-</p>
+        <h3>IT Manager & Data Analyst</h3>
+        <h5></h5>
+    </div>
+    <div class="timeline__desc">
+        <ul>
+            <li>Managed IT operations and performed data analysis tasks.</li>
+        </ul>
+    </div>
+</div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+    </section> <!-- end about -->
+    
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">Concrete Strength Prediction using Machine Learning</h3>
+                            <p class="item-folio__cat">A machine learning model to predict concrete compressive strength based on various input features.</p>
+                            <a href="Concrete Strength Prediction using Machine Learning.docx" class="item-folio__project-link" title="Project Document" download>
+                                <i class="im im-download"></i> Download Project
+                            </a>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Customer Clothing Fit Analysis.docx" download>Customer Clothing Fit Analysis & Predictive Modeling</a></h3>
+                            <p class="item-folio__cat">Analyzed customer clothing fit data using machine learning models including Logistic Regression, Random Forest, and AdaBoost. Applied PCA for dimensionality reduction and sentiment analysis on reviews. Technologies: Python, Pandas, Scikit-learn, NLTK.</p>
+                            <a href="Customer Clothing Fit Analysis.docx" class="item-folio__project-link" title="Project Document" download>
+                                <i class="im im-download"></i> Download Project
+                            </a>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Loan Approval Prediction.docx" download>Loan Approval Prediction & Web Application</a></h3>
+                            <p class="item-folio__cat">Analyzed and predicted loan approvals using classification models like Random Forest and Gradient Boosting. Developed a Flask web app with user authentication for real-time loan approval predictions. Technologies: Python, Flask, Scikit-learn, MySQL.</p>
+                            <a href="Loan Approval Prediction.docx" class="item-folio__project-link" title="Project Document" download>
+                                <i class="im im-download"></i> Download Project
+                            </a>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Used Car Price Prediction Application.docx" download>Used Car Price Prediction Application</a></h3>
+                            <p class="item-folio__cat">Built and deployed a Random Forest regression model to predict used car prices. Developed a Flask API and frontend, deployed on Heroku. Technologies: Python, Flask, Scikit-learn, Heroku.</p>
+                            <a href="Used Car Price Prediction Application.docx" class="item-folio__project-link" title="Project Document" download>
+                                <i class="im im-download"></i> Download Project
+                            </a>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Yash Vardhan Yadav resume edit.docx" download>Yash Vardhan Yadav - Python Developer & AI Specialist</a></h3>
+                            <p class="item-folio__cat">Experienced Python developer with expertise in AI-driven applications, e-commerce solutions, and system optimization. Skilled in Django, Flask, machine learning, and API integrations.</p>
+                            <a href="Yash Vardhan Yadav resume edit.docx" class="item-folio__project-link" title="Resume Document" download>
+                                <i class="im im-download"></i> Download Resume
+                            </a>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+            </div>
+        </div> <!-- end masonry -->
+
+    </section> <!-- end works -->
+
+
+
+    <!-- testimonials
+    ================================================== -->
+    <div class="s-testimonials">
+
+        <div class="overlay"></div>
+
+        <div class="row testimonials-header">
+            <div class="col-full">
+                <h1 class="h02">Self Projects</h1>
+            </div>
+            <br>
+        </div>
+
+        <div class="row testimonials">
+
+            <div class="col-full testimonials__slider">
+
+                <div class="testimonials__slide">
+
+                    <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Concrete Strength Prediction using Machine Learning.docx" download style="color: white;">Concrete Strength Prediction using Machine Learning-->(download details)</a></h3>
+                            <p class="item-folio__cat">Predict compressive strength of concrete using regression models with features like cement, slag, fly ash, water, and aggregates. Technologies: Python, Pandas, Scikit-learn.</p>
+                            <a href="Concrete Strength Prediction using Machine Learning.docx" class="item-folio__project-link" title="Project Document" download>
+                                <i class="im im-download"></i> Download Project
+                            </a>
+                    </div>
+
+                </div>
+
+                <div class="testimonials__slide">
+
+                    <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Customer Clothing Fit Analysis.docx" download style="color: white;">Customer Clothing Fit Analysis-->(download details)</a></h3>
+                        <p class="item-folio__cat">Analysis of customer clothing fit preferences using data clustering and PCA techniques.</p>
+                        <a href="Customer Clothing Fit Analysis.docx" class="item-folio__project-link" title="Project Document" download>
+                            <i class="im im-download"></i> Download Project
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="testimonials__slide">
+
+                    <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Loan Approval Prediction.docx" download style="color: white;">Loan Approval Prediction--> (download details)</a></h3>
+                        <p class="item-folio__cat">Predicting loan approval status using classification algorithms and feature engineering.</p>
+                        <a href="Loan Approval Prediction.docx" class="item-folio__project-link" title="Project Document" download>
+                            <i class="im im-download"></i> Download Project
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="testimonials__slide">
+
+                    <div class="item-folio__text">
+                            <h3 class="item-folio__title"><a href="Used Car Price Prediction Application.docx" download style="color: white;">Used Car Price Prediction Application -->(download details)</a></h3>
+                        <p class="item-folio__cat">A web application for predicting used car prices based on various features using regression models.</p>
+                        <a href="Used Car Price Prediction Application.docx" class="item-folio__project-link" title="Project Document" download>
+                            <i class="im im-download"></i> Download Project
+                        </a>
+                    </div>
+
+                </div>
+
+                
+
+            </div> <!-- end testimonials__slider -->
+
+        </div> <!-- end testimonials -->
+
+    </div> <!-- end s-testimonials -->
+
+
+    <!-- blog
+    ================================================== -->
+<section id="blog" class="s-blog target-section" style="display:none;">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>Journal</h3>
+                <h1>Latest From The Blog.</h1>
+                <p class="lead"></p>
+            </div>
+        </div>
+
+        <div class="row blog-content">
+            <div class="col-full">
+
+                <div class="blog-list block-1-2 block-tab-full">
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <a href="blog-single.html">Sept , 2022</a>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="jaipurSarees.html">Jaipur Saree Project</a></h2>
+                        <p>
+                            The Jaipur project is a Django-based e-commerce platform designed to facilitate online shopping for customers. It provides product management, shopping cart, checkout, payment processing, user authentication, and order management functionalities.
+                        </p>
+
+                        <div class="blog-cat">
+                                <a href="blog.html">Branding</a><a href="blog.html">Design</a>
+                        </div>
+
+                        
+                    </article>
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <a href="blog-single.html">July, 2022</a>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="rentheDress.html">Rent the Runway Data Science Project.</a></h2>
+                        <p>
+                            The Rent the Runway project is a data science analysis aimed at understanding customer and product characteristics from rental data. The project involves data cleaning, feature engineering, predictive modeling, dimensionality reduction, and clustering to extract actionable insights for business decision-making.
+                        </p>
+
+                        <div class="blog-cat">
+                            <a href="blog.html">Photography</a>
+                        </div>
+
+                        
+                    </article>
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <a href="blog-single.html">Aug, 2024</a>
+                        </div>
+
+<h2 class="h01"><a href="whatsappAIChatBot.html">Whatsapp AI Chat bot.</a></h2>
+                        <p>
+                        Implementing AI models for chatbots on WhatsApp, leveraging Django for deployment and framework support. This AI-powered chatbot automates customer interactions, provides instant responses, and enhances user engagement through natural language processing and machine learning techniques.
+                        </p>
+
+                        <div class="blog-cat">
+                            <a href="blog.html">Branding</a><a href="blog.html">Wordpress</a>
+                        </div>
+                    </article>
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <a href="blog-single.html">Dec, 2023</a>
+                        </div>    
+                        <h2 class="h01"><a href="concreteProjectSummary.html">Concrete Strength Prediction Project Summary</a></h2>
+                        <p>
+                        A detailed data analysis and predictive modeling project focused on estimating concrete compressive strength using regression techniques and feature engineering.
+                        </p>
+
+                        <div class="blog-cat">
+                            <a href="blog.html">Data Science</a><a href="blog.html">Machine Learning</a>
+                        </div>
+                    </article>
+                </div> <!-- end blog-list -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end blog-content -->
+
+    </section> <!-- end s-blog -->
+
+
+    <!-- s-cta
+    ================================================== -->
+    
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="stats" class="s-stats" style="display: none;">
+        <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">
+                    128
+                </div>
+                <h4>Awards Received</h4>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                    1500
+                </div>
+                <h4>Cups of Coffee</h4>
+            </div>
+            <div class="col-block stats__col stats__col--highlight">
+                <div class="stats__upsign">
+                    <a href="#"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="stats__count">
+                    110
+                </div>
+                <h4>Projects Completed</h4>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                    101
+                </div>
+                <h4>Happy Clients</h4> 
+            </div>
+
+        </div>
+    </section> <!-- end s-stats -->
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <h3>Contact</h3>
+                <h1>Say Hello.</h1>
+                
+                <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
+            </div>
+        </div>
+
+        <div class="row contact__main">
+            <div class="col-eight tab-full contact__form">
+                <form name="contactForm" id="contactForm" method="post" action="">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+                        
+            </div>
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">Phone</h4>
+                <p>Phone: (+91) 7465 888 485<br>
+                
+                </p>
+
+                <h4 class="h06">Email</h4>
+                <p>yashzob@gmail.com<br>
+                
+                </p>
+
+                <h4 class="h06">Address</h4>
+                <p>
+                Govindpuri<br>
+                Delhi<br>
+                
+                </p>
+            </div>
+
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
+                </div>
+
+                <ul class="footer-social">
+                    <li><a href="#0">
+                        <i class="im im-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-behance" aria-hidden="true"></i>
+                        <span>Behance</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-pinterest" aria-hidden="true"></i>
+                        <span>Pinterest</span>
+                    </a></li>
+                </ul>
+                    
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Hola 2017</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jaipur Saree Project</title>
+    <meta name="description" content="Jaipur Saree Project - Django E-commerce Platform">
+    <meta name="author" content="Yash Vardhan Yadav">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body id="top">
+
+    <!-- header -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a class="smoothscroll" href="index.html#home" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="index.html#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="index.html#works" title="works">Works</a></li>
+                <li><a class="smoothscroll" href="index.html#blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll" href="index.html#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+    <!-- main content -->
+    <section id="project-overview" class="s-about target-section">
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>Project Overview</h3>
+                <h1>Jaipur Saree Project</h1>
+                <p class="lead">The Jaipur project is a Django-based e-commerce platform designed to facilitate online shopping for customers. It provides product management, shopping cart, checkout, payment processing, user authentication, and order management functionalities.</p>
+            </div>
+        </div>
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full left">
+                <h3>Technology Stack</h3>
+                <ul>
+                    <li><strong>Backend:</strong> Django 4.2.2 (Python)</li>
+                    <li><strong>Database:</strong> PostgreSQL</li>
+                    <li><strong>Frontend:</strong> Django Templates, HTML, CSS, JavaScript</li>
+                    <li><strong>Payment Integration:</strong> Stripe</li>
+                    <li><strong>Communication Integration:</strong> Twilio (for WhatsApp and SMS)</li>
+                    <li><strong>Other:</strong> phonenumber_field for phone number validation</li>
+                </ul>
+
+                <h3>Architecture and Components</h3>
+                <p>The project consists of two main Django apps: <strong>"store"</strong> and <strong>"verification"</strong>.</p>
+                <ul>
+                    <li>The <strong>store</strong> app handles product CRUD operations, shopping cart, checkout, payment, user authentication, and order management.</li>
+                    <li>The <strong>verification</strong> app likely handles user verification processes.</li>
+                    <li>The project uses Django's built-in authentication system extended with a custom Customer model.</li>
+                </ul>
+
+                <h3>Features and Functionalities</h3>
+                <ul>
+                    <li>Product Management: Create, read, update, and delete products with version control to handle concurrent updates.</li>
+                    <li>Shopping Cart: Session and user-based cart management with AJAX support for adding/removing items.</li>
+                    <li>Checkout: Shipping address management, payment method selection (Stripe or Cash on Delivery).</li>
+                    <li>Payment Processing: Stripe integration for secure payment handling.</li>
+                    <li>User Authentication: Registration, login, logout with email and phone number validation.</li>
+                    <li>Order Management: Order confirmation, order history, and transaction tracking.</li>
+                    <li>Communication: Twilio integration for WhatsApp and SMS notifications.</li>
+                </ul>
+            </div>
+
+            <div class="col-six tab-full right">
+                <h3>Concurrency Control</h3>
+                <p>The project implements optimistic concurrency control on the Product model using a version field.</p>
+                <ul>
+                    <li>Each product has a version number that increments on every update.</li>
+                    <li>When updating a product, the current version is checked against the database version to detect conflicts.</li>
+                    <li>If a version conflict is detected (indicating another user has modified the product), the request is pushed into a queue for retry processing using Django Q, ensuring eventual consistency and preventing lost updates.</li>
+                    <li>The product update view uses database transactions and select_for_update to ensure atomicity and consistency during updates.</li>
+                    <li>This mechanism prevents lost updates and ensures data integrity in concurrent environments.</li>
+                </ul>
+
+                <h3>Database Design</h3>
+                <ul>
+                    <li>Customer model linked to Django User with additional fields.</li>
+                    <li>Product model with fields for name, price, stock, image, and versioning.</li>
+                    <li>Order and OrderItem models to track customer orders and items.</li>
+                    <li>ShippingAddress model to store shipping details.</li>
+                </ul>
+
+                <h3>Security and Session Management</h3>
+                <ul>
+                    <li>Uses Django's security middleware and password validators.</li>
+                    <li>Session management for cart and order data.</li>
+                    <li>CSRF protection enabled with trusted origins configured.</li>
+                </ul>
+            </div>
+
+        </div> <!-- end about-content -->
+
+    </section> <!-- end project-overview -->
+
+    <!-- footer -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+                </div>
+
+                <ul class="footer-social">
+                    <li><a href="#0">
+                        <i class="im im-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-behance" aria-hidden="true"></i>
+                        <span>Behance</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-pinterest" aria-hidden="true"></i>
+                        <span>Pinterest</span>
+                    </a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Hola 2017</span>
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+    <!-- Java Script -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
