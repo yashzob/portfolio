@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Well Depth Calculator - Yash Vardhan Yadav</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/testimonials-responsive-fix.css" />
+</head>
+<body id="top">
+
+  <!-- header -->
+  <header class="s-header">
+
+    <div class="header-logo">
+      <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage" /></a>
+    </div>
+
+    <nav class="header-nav-wrap">
+      <ul class="header-nav">
+        <li><a class="smoothscroll" href="index.html#home" title="home">Home</a></li>
+        <li><a class="smoothscroll" href="index.html#about" title="about">About</a></li>
+        <li><a class="smoothscroll" href="index.html#works" title="works">Works</a></li>
+        <li><a class="smoothscroll" href="index.html#blog" title="blog">Blog</a></li>
+        <li><a class="smoothscroll" href="index.html#contact" title="contact">Contact</a></li>
+        <li><a href="depthOfwell.html" title="Well Depth Calculator">Well Depth Calculator</a></li>
+      </ul>
+    </nav>
+
+    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+  </header> <!-- end s-header -->
+
+  <section class="s-about target-section" style="padding-top: 6rem; padding-bottom: 6rem; background-color: #FFFFFF; max-width: 600px; margin: 6rem auto; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+    <div class="row narrow section-intro has-bottom-sep" style="text-align: center;">
+      <div class="col-full">
+        <h2 class="h02" style="color: #0D0A0B;">Well Depth Calculator</h2>
+        <p style="color: #0D0A0B; font-family: 'montserrat-regular', sans-serif; font-size: 1.6rem; line-height: 1.5; margin-bottom: 3rem;">
+          Enter the values below to calculate the estimated depth of the well.
+        </p>
+      </div>
+    </div>
+
+    <form id="depthCalcForm" onsubmit="event.preventDefault(); calculateDepth();" novalidate>
+      <fieldset>
+        <div class="form-field">
+          <label for="T_total" style="color: #0D0A0B; font-family: 'montserrat-bold', sans-serif; font-size: 1.4rem;">Total Time (T) in seconds when release of stone and the sound heard:</label>
+          <input type="number" id="T_total" step="0.01" class="full-width" required />
+        </div>
+
+        <div class="form-field">
+          <label for="T0_Celsius" style="color: #0D0A0B; font-family: 'montserrat-bold', sans-serif; font-size: 1.4rem;">Outside Temperature (in °C):</label>
+          <input type="number" id="T0_Celsius" step="0.1" class="full-width" required />
+        </div>
+
+        <div class="form-field">
+          <label for="alpha" style="color: #0D0A0B; font-family: 'montserrat-bold', sans-serif; font-size: 1.4rem;">Temperature Gradient (in °C/m):</label>
+          <input type="number" id="alpha" step="0.001" value="0.02" class="full-width" required />
+        </div>
+
+        <div class="form-field">
+          <button type="submit" class="btn btn--primary full-width">Calculate</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <div id="result" style="font-weight: bold; font-family: 'montserrat-semibold', sans-serif; font-size: 1.6rem; color: #0D0A0B; text-align: center; margin-top: 1.5rem;"></div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="row">
+      <div class="col-full">
+
+        <div class="footer-logo">
+          <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage" /></a>
+        </div>
+
+        <ul class="footer-social">
+          <li><a href="#0">
+              <i class="im im-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a></li>
+          <li><a href="#0">
+              <i class="im im-twitter" aria-hidden="true"></i>
+              <span>Twitter</span>
+            </a></li>
+          <li><a href="#0">
+              <i class="im im-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+            </a></li>
+          <li><a href="#0">
+              <i class="im im-behance" aria-hidden="true"></i>
+              <span>Behance</span>
+            </a></li>
+          <li><a href="#0">
+              <i class="im im-pinterest" aria-hidden="true"></i>
+              <span>Pinterest</span>
+            </a></li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="row footer-bottom">
+
+      <div class="col-twelve">
+        <div class="copyright">
+          <span>© Copyright Yash 2017</span>
+          <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
+        </div>
+
+        <div class="go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+    </div> <!-- end footer-bottom -->
+
+  </footer> <!-- end footer -->
+
+  <script>
+    function calculateDepth() {
+      const T_total = parseFloat(document.getElementById("T_total").value);
+      const T0_Celsius = parseFloat(document.getElementById("T0_Celsius").value);
+      const alpha_C_per_m = parseFloat(document.getElementById("alpha").value);
+
+      if (isNaN(T_total) || isNaN(T0_Celsius) || isNaN(alpha_C_per_m)) {
+        document.getElementById("result").innerText = "Please enter valid inputs.";
+        return;
+      }
+
+      // Constants
+      const g = 9.8;
+      const gamma = 1.4;
+      const R = 8.314;
+      const M = 0.029;
+      const C = Math.sqrt(gamma * R / M);
+      const T0 = T0_Celsius + 273.15;
+      const alpha = alpha_C_per_m;
+
+      // Newton-Raphson Method
+      let d = 10.0; // initial guess
+      let tolerance = 0.0001;
+      let maxIter = 100;
+
+      for (let i = 0; i < maxIter; i++) {
+        let fallTime = Math.sqrt(2 * d / g);
+        let soundTime = (2 / (C * alpha)) * (Math.sqrt(T0 + alpha * d) - Math.sqrt(T0));
+        let f = fallTime + soundTime - T_total;
+
+        let df = (1 / Math.sqrt(2 * g * d)) + (1 / (C * Math.sqrt(T0 + alpha * d)));
+
+        let new_d = d - f / df;
+
+        if (Math.abs(new_d - d) < tolerance) {
+          d = new_d;
+          break;
+        }
+        d = new_d;
+      }
+
+      document.getElementById("result").innerText = `Estimated Depth of Well: ${d.toFixed(2)} meters`;
+    }
+  </script>
+</body>
+</html>
